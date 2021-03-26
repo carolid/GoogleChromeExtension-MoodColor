@@ -29,7 +29,14 @@ let emojis = document.getElementsByClassName("emoji");
 
 for (emoji of emojis) {
   emoji.addEventListener("click", function() {
+    // unbold any active emojis
+    active_emoji = document.querySelector("img.active.emoji");
+    if (active_emoji != null) {
+      active_emoji.classList.remove("active");
+    }
+
     console.log("clicked on emoji", this.id);
+    // turn clicked emoji bold
     this.classList.add("active");
 })
 }
