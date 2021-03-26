@@ -3,6 +3,20 @@ body, html {
   width: 500px;
 }
 
+img.emoji {
+  height: 25%;
+  width: 25%;
+  opacity: 40%;
+}
+
+img.emoji.active{
+  opacity:100%;
+}
+
+img.emoji:hover{
+  opacity: 100%;
+}
+
 button {
   height: 40px;
   width: 50px;

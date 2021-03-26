@@ -22,3 +22,16 @@
 //     document.body.style.backgroundColor = color;
 //   });
 // }
+
+console.log("dsfsdaadasd");
+
+let emojis = document.getElementsByClassName("emoji");
+
+for (emoji of emojis) {
+  emoji.addEventListener("click", function() {
+    console.log("clicked on emoji", this.id);
+    this.classList.add("active");
+})
+}
+
+
