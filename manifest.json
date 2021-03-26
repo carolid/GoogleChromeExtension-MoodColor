@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Mood Color",
+  "description": "Connect your mood with your favorite colors and songs!",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
