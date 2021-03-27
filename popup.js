@@ -22,6 +22,106 @@
 //     document.body.style.backgroundColor = color;
 //   });
 // }
+
+function set_mood_color(mood_id, color) {
+  if (mood_id == "happy_emoji") {
+    chrome.storage.local.set({"happy_color": color}, function() {
+    console.log('Mood color ' + mood_id + ' is set to ' + color);
+    });
+  } else if (mood_id == "sad_emoji") {
+    chrome.storage.local.set({"sad_color": color}, function() {
+    console.log('Mood color ' + mood_id + ' is set to ' + color);
+    });
+  } else if (mood_id = "tired_emoji") {
+    chrome.storage.local.set({"tired_color": color}, function() {
+    console.log('Mood color ' + mood_id + ' is set to ' + color);
+    });
+  }
+
+}
+
+function get_mood_color(mood_id){
+  mood_color = "";
+  if (mood_id == "happy_emoji") {
+    chrome.storage.local.get(['happy_color'], function(result) {
+    console.log('Retrieved mood_color for ' + mood_id + " is "+ result.happy_color);
+    mood_color = result.happy_color;
+    });
+  } else if (mood_id == "sad_emoji") {
+    chrome.storage.local.get(['sad_color'], function(result) {
+    console.log('Retrieved mood_color for ' + mood_id + " is "+ result.sad_color);
+    mood_color = result.sad_color;
+    });
+  } else if (mood_id = "tired_emoji") {
+    chrome.storage.local.get(['tired_color'], function(result) {
+    console.log('Retrieved mood_color for ' + mood_id + " is "+ result.tired_color);
+    mood_color = result.tired_color;
+    });
+  }
+  return mood_color;
+}
+
+function set_mood_song(mood_id, song_url){
+  if (mood_id == "happy_emoji") {
+    chrome.storage.local.set({"happy_song_url": song_url}, function() {
+    console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
+    });
+  } else if (mood_id == "sad_emoji") {
+    chrome.storage.local.set({"sad_song_url": song_url}, function() {
+    console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
+    });
+  } else if (mood_id = "tired_emoji") {
+    chrome.storage.local.set({"tired_song_url": song_url}, function() {
+    console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
+    });
+  }
+}
+
+function get_mood_song(mood_id){
+  song_url = "";
+
+  if (mood_id == "happy_emoji") {
+    chrome.storage.local.get({"happy_song_url": song_url}, function(result) {
+    song_url = result.happy_song_url;
+    console.log('retrieved', song_url, 'for', mood_id);
+    });
+  } else if (mood_id == "sad_emoji") {
+    chrome.storage.local.get({"sad_song_url": song_url}, function(result) {
+    song_url = result.sad_song_url;
+    console.log('retrieved', song_url, 'for', mood_id);
+    });
+  } else if (mood_id = "tired_emoji") {
+    chrome.storage.local.get({"tired_song_url": song_url}, function(result) {
+    song_url = result.tired_song_url;
+    console.log('retrieved', song_url, 'for', mood_id);
+    });
+  }
+  
+  return song_url;
+}
+
+
+// initialize preset colors and songs
+set_mood_color("sad_emoji", "blue");
+set_mood_color("tired_emoji", "gray");
+set_mood_color("happy_emoji", "green");
+set_mood_color("cute_emoji", "pink");
+set_mood_color("content_emoji", "yellow");
+set_mood_color("excited_emoji", "purple");
+
+
+// get_mood_color("happy_emoji");
+
+// initialize default songs
+set_mood_song("sad_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
+set_mood_song("tired_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
+set_mood_song("happy_emoji", "https://www.youtube.com/watch?v=ZbZSe6N_BXs");
+set_mood_song("cute_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
+set_mood_song("content_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
+set_mood_song("excited_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
+
+// get_mood_song("happy_emoji");
+
 class Emoji {
   constructor(emoji_id, color, song) {
     this.emoji_element = document.getElementById(emoji_id);
@@ -61,8 +161,14 @@ for (emoji of emojis) {
     this.classList.add("active");
 
     // ******** Change color ************
+      // need to get the color for  THIS emoji
+        // we know this.id = "happy_emoji"   
+          // look up the key in chrome storage for happy_emoji, something like happy_color???
+        // running a get call from chrome storage
+        // document.backgroundColor = color_retrieved
 
-    // *********** Change song **************
+
+    // *********** Play song **************
       // key = this.id;                        returns something like "happy_emoji"
       // emoji_object = EmojiObjects[key];      Object contains, song and color
       // song_to_play = emoji_object.song       some "youtube.com/ "
@@ -77,7 +183,17 @@ for (emoji of emojis) {
 })
 }
 
+// button = getElementByID("Customize_Button");
+// add event listener on "click"
+// function ()
+  // update_color
+    // getting the color choice from dropdown
+    // updating color data within chrome storage
+    // change_color ** see above
+  // update_song
+    // getting the song choice from dropdown
+    // updating song data within chrome storage
+    // change_song **s ee above
 
 
 console.log(EmojiObjects);
-
