@@ -14,11 +14,22 @@
   </head>
   <body>
     <div class="emoji_list">
-      <img id="happy_emoji" class="emoji" src="images/happy_emoji.png" alt="">
+      <img id="happy_emoji" class="emoji" src="images/happy_emoji.png" alt="" onClick = "playHappySong();"/>
+      <video id = "happySong">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MOWDb2TBYDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </video>
+      <script> 
+      let happySong = document.getElementById("happySong"); 
+      function playHappySong() {
+        // function that will play our "happySong"
+          happySong.play(); 
+        }
+      </script>
       <img id="sad_emoji" class="emoji" src="images/sad_emoji.png" alt="">
       <img id="tired_emoji" class="emoji" src="images/tired_emoji.png" alt="">
 
     </div>
+
     <script src="popup.js"></script>
   </body>
 </html>
