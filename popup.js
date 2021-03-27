@@ -22,23 +22,42 @@
 //     document.body.style.backgroundColor = color;
 //   });
 // }
+class Emoji {
+  constructor(emoji_id, color, song) {
+    this.emoji_element = document.getElementById(emoji_id);
+    this.color = color;
+    this.song = song;
+  }
+}
 
-console.log("dsfsdaadasd");
+// object containing emoji objects
+let EmojiObjects = {};
 
+// array of emoji HTML elements
 let emojis = document.getElementsByClassName("emoji");
 
 for (emoji of emojis) {
+  // create a js object for each emoji element
+  EmojiObjects[emoji.id] = new Emoji(emoji.id, "default_color", "default_song");
+
+  // add click listener to each emoji element
   emoji.addEventListener("click", function() {
+    console.log("Clicked on: \n", this.id);
     // unbold any active emojis
     active_emoji = document.querySelector("img.active.emoji");
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
-
-    console.log("clicked on emoji", this.id);
     // turn clicked emoji bold
     this.classList.add("active");
+
+    // change color
+
+    // change song
 })
 }
 
+
+
+console.log(EmojiObjects);
 
