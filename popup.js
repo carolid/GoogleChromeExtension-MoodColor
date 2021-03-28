@@ -36,15 +36,15 @@ function set_mood_color(mood_id, color) {
     chrome.storage.local.set({"tired_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id = "cute_emoji") {
+  } else if (mood_id == "cute_emoji") {
     chrome.storage.local.set({"cute_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  }else if (mood_id = "content_emoji") {
+  }else if (mood_id == "content_emoji") {
     chrome.storage.local.set({"content_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  }else if (mood_id = "excited_emoji") {
+  }else if (mood_id == "excited_emoji") {
     chrome.storage.local.set({"excited_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
@@ -204,18 +204,10 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
-<<<<<<< HEAD
-    let mood_id = this.id;
-    let song_to_play = get_mood_song(this.id);
-    window.open(result.song_to_play);
-    })
-  }
-=======
-    // turn clicked emoji bold
+     // turn clicked emoji bold
     this.classList.add("active");
->>>>>>> b7320fac30c6cfd03a8800bf028e1805ff34d6a4
-
-    // ** Change color **
+    
+        // ** Change color **
       // need to get the color for THIS emoji
         // get color string using get_mood_color()
         // document.backgroundColor = color_retrieved
@@ -229,11 +221,24 @@ for (emoji of emojis) {
       // iframe_element = document.getElementById("iframe_id")
       // iframe_element.src = song_to_play
 
+
+    // let mood_id = this.id;
+    // let song_to_play = get_mood_song(this.id);
+    // window.open(result.song_to_play);
+
+    
+
       //  let happySong = document.getElementById("current_song");
       // function playHappySong() {
       //   // function that will play our "happySong"
       //     happySong.play();
       //   }
+
+    })
+  }
+   
+
+
 
 // * CUSTOMIZE BUTTON FOR COLOR / SONG DROP DOWN)
 // button = getElementByID("Customize_Button");
