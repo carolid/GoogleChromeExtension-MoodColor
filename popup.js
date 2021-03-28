@@ -145,18 +145,15 @@ for (emoji of emojis) {
       active_emoji.classList.remove("active");
     }
 
-    // ******** Change color ************
-      // need to get the color for  THIS emoji
-        // we know this.id = "happy_emoji"
-          // look up the key in chrome storage for happy_emoji, something like happy_color???
-        // running a get call from chrome storage
+    // ** Change color **
+      // need to get the color for THIS emoji
+        // get color string using get_mood_color()
         // document.backgroundColor = color_retrieved
 
 
-    // *********** Play song **************
+    // *** Play song **
       // key = this.id;                        returns something like "happy_emoji"
-      // emoji_object = EmojiObjects[key];      Object contains, song and color
-      // song_to_play = emoji_object.song       some "youtube.com/ "
+      // get song_url using get_mood_song()
       // iframe_element = document.getElementById("iframe_id")
       // iframe_element.src = song_to_play
 
