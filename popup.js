@@ -217,11 +217,24 @@ for (emoji of emojis) {
       // iframe_element = document.getElementById("iframe_id")
       // iframe_element.src = song_to_play
 
+
+    // let mood_id = this.id;
+    // let song_to_play = get_mood_song(this.id);
+    // window.open(result.song_to_play);
+
+    
+
       //  let happySong = document.getElementById("current_song");
       // function playHappySong() {
       //   // function that will play our "happySong"
       //     happySong.play();
       //   }
+
+    })
+  }
+   
+
+
 
 // * CUSTOMIZE BUTTON FOR COLOR / SONG DROP DOWN)
 // button = getElementByID("Customize_Button");
