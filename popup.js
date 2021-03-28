@@ -36,15 +36,15 @@ function set_mood_color(mood_id, color) {
     chrome.storage.local.set({"tired_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id == "cute_emoji") {
+  } else if (mood_id = "cute_emoji") {
     chrome.storage.local.set({"cute_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id == "content_emoji") {
+  }else if (mood_id = "content_emoji") {
     chrome.storage.local.set({"content_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id = "excited_emoji") {
+  }else if (mood_id = "excited_emoji") {
     chrome.storage.local.set({"excited_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
@@ -64,7 +64,7 @@ function get_mood_color(mood_id){
     console.log('Retrieved mood_color for ' + mood_id + " is "+ result.sad_color);
     mood_color = result.sad_color;
     });
-  } else if (mood_id = "tired_emoji") {
+  } else if (mood_id == "tired_emoji") {
     chrome.storage.local.get(['tired_color'], function(result) {
     console.log('Retrieved mood_color for ' + mood_id + " is "+ result.tired_color);
     mood_color = result.tired_color;
@@ -79,7 +79,7 @@ function get_mood_color(mood_id){
     console.log('Retrieved mood_color for ' + mood_id + " is "+ result.content_color);
     mood_color = result.content_color;
     });
-  } else if (mood_id = "excited_emoji") {
+  } else if (mood_id == "excited_emoji") {
     chrome.storage.local.get(['excited_color'], function(result) {
     console.log('Retrieved mood_color for ' + mood_id + " is "+ result.excited_color);
     mood_color = result.excited_color;
@@ -88,6 +88,8 @@ function get_mood_color(mood_id){
   return mood_color;
 }
 
+// returns a string representing color   ex. "blue"
+// USAGE: get_mood_color("happy_emoji");
 function set_mood_song(mood_id, song_url){
   if (mood_id == "happy_emoji") {
     chrome.storage.local.set({"happy_song_url": song_url}, function() {
@@ -97,7 +99,7 @@ function set_mood_song(mood_id, song_url){
     chrome.storage.local.set({"sad_song_url": song_url}, function() {
     console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
     });
-  } else if (mood_id = "tired_emoji") {
+  } else if (mood_id == "tired_emoji") {
     chrome.storage.local.set({"tired_song_url": song_url}, function() {
     console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
     });
@@ -109,14 +111,18 @@ function set_mood_song(mood_id, song_url){
     chrome.storage.local.set({"content_song_url": song_url}, function() {
     console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
     });
-  } else if (mood_id = "excited_emoji") {
+  } else if (mood_id == "excited_emoji") {
     chrome.storage.local.set({"excited_song_url": song_url}, function() {
     console.log('Mood song_url ' + mood_id + ' is set to ' + song_url);
     });
   }
 }
 
+// returns a string representing color   ex. "blue"
+// USAGE: get_mood_color("happy_emoji");
 function get_mood_song(mood_id){
+  console.log("inside get_mood_song, mood_id: ", mood_id);
+
   song_url = "";
 
   if (mood_id == "happy_emoji") {
@@ -129,7 +135,7 @@ function get_mood_song(mood_id){
     song_url = result.sad_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
-  } else if (mood_id = "tired_emoji") {
+  } else if (mood_id == "tired_emoji") {
     chrome.storage.local.get({"tired_song_url": song_url}, function(result) {
     song_url = result.tired_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
@@ -144,13 +150,13 @@ function get_mood_song(mood_id){
     song_url = result.content_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
-  } else if (mood_id = "excited_emoji") {
+  } else if (mood_id == "excited_emoji") {
     chrome.storage.local.get({"excited_song_url": song_url}, function(result) {
     song_url = result.excited_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
   }
-
+  
   return song_url;
 }
 
@@ -198,6 +204,8 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
+    // turn clicked emoji bold
+    this.classList.add("active");
 
     // ** Change color **
       // need to get the color for THIS emoji
