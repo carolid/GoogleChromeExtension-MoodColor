@@ -94,27 +94,27 @@ function get_mood_color(mood_id) {
 
 function set_mood_song(mood_id, song_url) {
   if (mood_id == "happy_emoji") {
-      chrome.storage.local.set({ happy_song_url: "https://www.youtube.com/watch?v=ZbZSe6N_BXs" }, function () {
+      chrome.storage.local.set({ happy_song_url: song_url }, function () {
           console.log("Mood song_url " + mood_id + " is set to " + song_url);
       });
   } else if (mood_id == "sad_emoji") {
-      chrome.storage.local.set({ sad_song_url: "https://www.youtube.com/watch?v=zwJQE0HkYZw" }, function () {
+      chrome.storage.local.set({ sad_song_url: song_url }, function () {
           console.log("Mood song_url " + mood_id + " is set to " + song_url);
       });
   } else if (mood_id == "tired_emoji") {
-      chrome.storage.local.set({ tired_song_url: "https://www.youtube.com/watch?v=zwJQE0HkYZw" }, function () {
+      chrome.storage.local.set({ tired_song_url: song_url }, function () {
           console.log("Mood song_url " + mood_id + " is set to " + song_url);
       });
   } else if (mood_id == "cute_emoji") {
-      chrome.storage.local.set({ cute_song_url: "https://www.youtube.com/watch?v=zwJQE0HkYZw" }, function () {
+      chrome.storage.local.set({ cute_song_url: song_url }, function () {
           console.log("Mood song_url " + mood_id + " is set to " + song_url);
       });
   } else if (mood_id == "content_emoji") {
-      chrome.storage.local.set({ content_song_url: "https://www.youtube.com/watch?v=zwJQE0HkYZw" }, function () {
+      chrome.storage.local.set({ content_song_url: song_url }, function () {
           console.log("Mood song_url " + mood_id + " is set to " + song_url);
       });
   } else if (mood_id == "excited_emoji") {
-      chrome.storage.local.set({ excited_song_url: "https://www.youtube.com/watch?v=zwJQE0HkYZw" }, function () {
+      chrome.storage.local.set({ excited_song_url: song_url }, function () {
           console.log("Mood song_url " + mood_id + " is set to " + song_url);
       });
   }
@@ -127,12 +127,10 @@ function get_mood_song(mood_id) {
   console.log("inside get_mood_song, mood_id: ", mood_id);
 
   if (mood_id == "happy_emoji") {
-      //chrome.storage.local.get(["happy_song_url"], function (result) {
-    {
-        song_url = "https://www.youtube.com/watch?v=ZbZSe6N_BXs";
-        return song_url;
-        console.log("retrieved", song_url, "for", mood_id);
-      };
+    chrome.storage.local.get(["happy_song_url"], function (result) {
+          song_url = result.happy_song_url;
+          console.log("retrieved", song_url, "for", mood_id);
+      });
   } else if (mood_id == "sad_emoji") {
       chrome.storage.local.get(["sad_song_url"], function (result) {
           song_url = result.sad_song_url;
@@ -170,14 +168,20 @@ set_mood_color("happy_emoji", "#DFF1D7");
 set_mood_color("cute_emoji", "#FAD6D6");
 set_mood_color("content_emoji", "#FEEBC8");
 set_mood_color("excited_emoji", "#FFFFD1");
+set_mood_color("sad_emoji", "#C3DAFE");
+set_mood_color("tired_emoji", "#E9D8FD");
+set_mood_color("happy_emoji", "#DFF1D7");
+set_mood_color("cute_emoji", "#FAD6D6");
+set_mood_color("content_emoji", "#FEEBC8");
+set_mood_color("excited_emoji", "#FFFFD1");
 
 // initialize default songs
-set_mood_song("sad_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
-set_mood_song("tired_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
-set_mood_song("happy_emoji", "https://www.youtube.com/watch?v=ZbZSe6N_BXs");
-set_mood_song("cute_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
-set_mood_song("content_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
-set_mood_song("excited_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
+set_mood_song("sad_emoji", "https://www.youtube.com/embed/pMzuzIjBXnQ");
+set_mood_song("tired_emoji", "https://www.youtube.com/embed/7cqHtGb9WYM");
+set_mood_song("happy_emoji", " https://www.youtube.com/embed/ZbZSe6N_BXs");
+set_mood_song("cute_emoji", "https://www.youtube.com/embed/c62M8uUqyD0");
+set_mood_song("content_emoji", "https://www.youtube.com/embed/UnyLfqpyi94");
+set_mood_song("excited_emoji", "https://www.youtube.com/embed/4NRXx6U8ABQ");
 
 // array of emoji HTML elements
 let emojis = document.getElementsByClassName("emoji");
@@ -206,52 +210,18 @@ for (emoji of emojis) {
       // ** Change color -- ANAGHA**
       let color_default = get_mood_color(this.id);
       color_default = get_mood_color(this.id);
-
       document.body.style.backgroundColor = color_default;
 
-      // *** Play song -- CAROLINE **
-      if (this.id == "happy_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 1000);
-    } else if (this.id == "sad_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=pMzuzIjBXnQ"), 1000);
-    } else if (this.id == "tired_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=7cqHtGb9WYM"), 1000);
-    } else if (this.id == "cute_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=c62M8uUqyD0"), 1000);
-    } else if (this.id == "content_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=UnyLfqpyi94"), 1000);
-    } else if (this.id == "excited_emoji") {
-        setTimeout(() => window.open("https://youtu.be/4NRXx6U8ABQ"), 1000);
-    }
 
-      // Modal Window Version
-      //var modal = document.getElementById("song_window");
-      //modal = document.getElementById("song_window");
-      //var span = document.getElementById("close")[0];
-      //modal.style.display = "block";
-    //   modal.style.display = "block";
-    //   window.oncick = function(event) {
-    //       if (event.target == modal) {
-    //           modal.style.display = "none";
-    //       }
-    //   }
-        //let song_to_play = get_mood_song(this.id);
-        //song_to_play = get_mood_song(this.id);
-
-    // let song_to_play = get_mood_song(this.id);
-        // song_to_play = get_mood_song(this.id);
-        // setTimeout(() => window.open(song_to_play), 5000);
-
-
-      // key = this.id;                        returns something like "happy_emoji"
+      mood_id = this.id;            
       // get song_url using get_mood_song()
-      // iframe_element = document.getElementById("iframe_id")
-      // iframe_element.src = song_to_play
+      let song_to_play = get_mood_song(mood_id);
+      song_to_play = get_mood_song(mood_id);
 
-      // let mood_id = this.id;
-      // let song_to_play = get_mood_song(this.id);
-      // window.open(result.song_to_play);
+      video = document.getElementById("video")
+      video.src = song_to_play
 
+ 
       //  let happySong = document.getElementById("current_song");
       // function playHappySong() {
       //   // function that will play our "happySong"
@@ -263,8 +233,25 @@ for (emoji of emojis) {
 
 
 // * CUSTOMIZE BUTTON FOR COLOR / SONG DROP DOWN)
-// button = getElementByID("Customize_Button");
+button = document.getElementById("customize_button");
 // add event listener on "click"
+button.addEventListener("click", function () {
+    console.log("Clicked on: \n", this.id);
+    // get color option
+    color_select = document.getElementById("color_select");
+    let new_color = color_select.value;
+
+    // find active emoji id
+    active_emoji = document.querySelector("img.active.emoji");
+    // set color
+    set_mood_color(active_emoji.id, new_color);
+
+    // update color;
+    // let color_default = get_mood_color(active_emoji.id);
+    // color_default = get_mood_color(active_emoji.id);
+    document.body.style.backgroundColor = new_color;
+
+  });
 // function ()
 // update_color    using set_mood_color()
 // getting the color choice from dropdown
