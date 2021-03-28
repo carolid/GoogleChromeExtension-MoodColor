@@ -209,11 +209,11 @@ for (emoji of emojis) {
       // need to get the color for THIS emoji
         // get color string using get_mood_color()
         // document.backgroundColor = color_retrieved
-        // ** Change color -- ANAGHA**
-        let color_default = get_mood_color(this.id);
-        color_default = get_mood_color(this.id);
+    // ** Change color -- ANAGHA**
+    let color_default = get_mood_color(this.id);
+    color_default = get_mood_color(this.id);
 
-        document.body.style.backgroundColor = color_default;
+    document.body.style.backgroundColor = color_default;
 
         // *** Play song **
 
