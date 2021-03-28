@@ -162,12 +162,12 @@ function get_mood_song(mood_id) {
 }
 
 // initialize preset colors and songs
-set_mood_color("sad_emoji", "blue");
-set_mood_color("tired_emoji", "gray");
-set_mood_color("happy_emoji", "green");
-set_mood_color("cute_emoji", "pink");
-set_mood_color("content_emoji", "yellow");
-set_mood_color("excited_emoji", "purple");
+set_mood_color("sad_emoji", "#C3DAFE");
+set_mood_color("tired_emoji", "#E9D8FD");
+set_mood_color("happy_emoji", "#DFF1D7");
+set_mood_color("cute_emoji", "#FAD6D6");
+set_mood_color("content_emoji", "#FEEBC8");
+set_mood_color("excited_emoji", "#FFFFD1");
 
 // initialize default songs
 set_mood_song("sad_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
