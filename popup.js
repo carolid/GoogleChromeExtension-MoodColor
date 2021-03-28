@@ -36,19 +36,15 @@ function set_mood_color(mood_id, color) {
     chrome.storage.local.set({"tired_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id = "cute_emoji") {
+  } else if (mood_id == "cute_emoji") {
     chrome.storage.local.set({"cute_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  }else if (mood_id = "content_emoji") {
+  } else if (mood_id == "content_emoji") {
     chrome.storage.local.set({"content_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-<<<<<<< HEAD
   } else if (mood_id == "excited_emoji") {
-=======
-  }else if (mood_id = "excited_emoji") {
->>>>>>> b7320fac30c6cfd03a8800bf028e1805ff34d6a4
     chrome.storage.local.set({"excited_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
@@ -92,8 +88,6 @@ function get_mood_color(mood_id){
   return mood_color;
 }
 
-// returns a string representing color   ex. "blue"
-// USAGE: get_mood_color("happy_emoji");
 function set_mood_song(mood_id, song_url){
   if (mood_id == "happy_emoji") {
     chrome.storage.local.set({"happy_song_url": song_url}, function() {
@@ -122,11 +116,7 @@ function set_mood_song(mood_id, song_url){
   }
 }
 
-// returns a string representing color   ex. "blue"
-// USAGE: get_mood_color("happy_emoji");
 function get_mood_song(mood_id){
-  console.log("inside get_mood_song, mood_id: ", mood_id);
-
   song_url = "";
 
   if (mood_id == "happy_emoji") {
@@ -166,12 +156,12 @@ function get_mood_song(mood_id){
 
 
 // initialize preset colors and songs
-set_mood_color("sad_emoji", "#C3DAFE");
-set_mood_color("tired_emoji", "#E9D8FD");
-set_mood_color("happy_emoji", "#DFF1D7");
-set_mood_color("cute_emoji", "#FAD6D6");
-set_mood_color("content_emoji", "#FEEBC8");
-set_mood_color("excited_emoji", "#FFFFD1");
+set_mood_color("sad_emoji", "blue");
+set_mood_color("tired_emoji", "gray");
+set_mood_color("happy_emoji", "green");
+set_mood_color("cute_emoji", "pink");
+set_mood_color("content_emoji", "yellow");
+set_mood_color("excited_emoji", "purple");
 
 
 // get_mood_color("happy_emoji");
@@ -208,24 +198,20 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
-<<<<<<< HEAD
     let mood_id = this.id;
+    let iframe_element = document.getElementById("song_window");
     let song_to_play = get_mood_song(this.id);
-    window.open(result.song_to_play);
+    iframe_element.src = song_to_play;
+    let video_element = document.getElementById("current_song");
+    video_element.play();
     })
   }
-=======
-    // turn clicked emoji bold
-    this.classList.add("active");
->>>>>>> b7320fac30c6cfd03a8800bf028e1805ff34d6a4
 
     // ** Change color **
       // need to get the color for THIS emoji
         // get color string using get_mood_color()
         // document.backgroundColor = color_retrieved
 
-    let color_default = get_mood_color(this.id);
-    document.body.style.backgroundColor = color_default;
 
     // *** Play song **
       // key = this.id;                        returns something like "happy_emoji"
