@@ -1,0 +1,37 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: white;
+    background-color: black;
+
+}
+
+.modal_content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid whitesmoke;
+    width: 80% auto;
+
+}
+
+.close {
+    color: blue;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
