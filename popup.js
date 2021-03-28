@@ -199,7 +199,7 @@ for (emoji of emojis) {
       active_emoji.classList.remove("active");
     }
     let mood_id = this.id;
-    let song_to_play = get_mood_song(mood_id);
+    let song_to_play = get_mood_song(this.id);
     window.open(song_url);
     })
   }
