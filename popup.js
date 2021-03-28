@@ -52,8 +52,9 @@ function set_mood_color(mood_id, color) {
 
 }
 
+var mood_color;
 function get_mood_color(mood_id){
-  mood_color = "";
+  
   if (mood_id == "happy_emoji") {
     chrome.storage.local.get(['happy_color'], function(result) {
     console.log('Retrieved mood_color for ' + mood_id + " is "+ result.happy_color);
@@ -118,46 +119,49 @@ function set_mood_song(mood_id, song_url){
   }
 }
 
+
+var song_url;
 // returns a string representing color   ex. "blue"
 // USAGE: get_mood_color("happy_emoji");
 function get_mood_song(mood_id){
   console.log("inside get_mood_song, mood_id: ", mood_id);
 
-  song_url = "";
 
   if (mood_id == "happy_emoji") {
-    chrome.storage.local.get({"happy_song_url": song_url}, function(result) {
+    chrome.storage.local.get(["happy_song_url"], function(result) {
     song_url = result.happy_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
   } else if (mood_id == "sad_emoji") {
-    chrome.storage.local.get({"sad_song_url": song_url}, function(result) {
+    chrome.storage.local.get(["sad_song_url"], function(result) {
     song_url = result.sad_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
   } else if (mood_id == "tired_emoji") {
-    chrome.storage.local.get({"tired_song_url": song_url}, function(result) {
+    chrome.storage.local.get(["tired_song_url"], function(result) {
     song_url = result.tired_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
   } else if (mood_id == "cute_emoji") {
-    chrome.storage.local.get({"cute_song_url": song_url}, function(result) {
+    chrome.storage.local.get(["cute_song_url"], function(result) {
     song_url = result.cute_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
   } else if (mood_id == "content_emoji") {
-    chrome.storage.local.get({"content_song_url": song_url}, function(result) {
+    chrome.storage.local.get(["content_song_url"], function(result) {
     song_url = result.content_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
   } else if (mood_id == "excited_emoji") {
-    chrome.storage.local.get({"excited_song_url": song_url}, function(result) {
+    chrome.storage.local.get(["excited_song_url"], function(result) {
     song_url = result.excited_song_url;
     console.log('retrieved', song_url, 'for', mood_id);
     });
+
   }
 
   return song_url;
+
 }
 
 
