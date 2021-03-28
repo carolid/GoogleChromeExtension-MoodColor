@@ -1,6 +1,6 @@
 {
-  "name": "MoodColor",
-  "description": "Connect your mood with your favorite colors and songs!",
+  "name": "MoodyOrange",
+  "description": "Music to get your feelings sorted.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
@@ -10,17 +10,17 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "/images/get_started16.png",
-      "32": "/images/get_started32.png",
-      "48": "/images/get_started48.png",
-      "128": "/images/get_started128.png"
+      "16": "/images/logo 16.png",
+      "32": "/images/logo 32.png",
+      "48": "/images/logo 48.png",
+      "128": "/images/logo 64.png"
     }
   },
   "icons": {
-    "16": "/images/get_started16.png",
-    "32": "/images/get_started32.png",
-    "48": "/images/get_started48.png",
-    "128": "/images/get_started128.png"
+    "16": "/images/logo 16.png",
+    "32": "/images/logo 32.png",
+    "48": "/images/logo 48.png",
+    "128": "/images/logo 64.png"
   },
   "options_page": "options.html"
 }
