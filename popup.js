@@ -44,11 +44,7 @@ function set_mood_color(mood_id, color) {
     chrome.storage.local.set({"content_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-<<<<<<< HEAD
-  } else if (mood_id == "excited_emoji") {
-=======
   }else if (mood_id = "excited_emoji") {
->>>>>>> b7320fac30c6cfd03a8800bf028e1805ff34d6a4
     chrome.storage.local.set({"excited_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
