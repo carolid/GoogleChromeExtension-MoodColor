@@ -199,8 +199,8 @@ for (emoji of emojis) {
       active_emoji.classList.remove("active");
     }
     let mood_id = this.id;
-    let song_to_play = get_mood_song(mood.id);
-    window.open(happy_song);
+    let song_to_play = get_mood_song(mood_id);
+    window.open(song_url);
     })
   }
 
