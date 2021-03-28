@@ -203,7 +203,7 @@ for (emoji of emojis) {
     let song_to_play = get_mood_song(this.id);
     iframe_element.src = song_to_play;
     let video_element = document.getElementById("current_song");
-    video_element.play();
+    video_element.onplay();
     })
   }
 
