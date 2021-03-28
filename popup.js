@@ -213,7 +213,7 @@ for (emoji of emojis) {
       // JS Version
       let song_to_play = get_mood_song(this.id);
       song_to_play = get_mood_song(this.id);
-      window.open(song_to_play, "_blank");
+      window.open(song_to_play, "_blank").focus();
       console.log("Retrieved song: ", song_to_play, "on click.");
 
       // key = this.id;                        returns something like "happy_emoji"
