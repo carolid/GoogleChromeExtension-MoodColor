@@ -96,7 +96,7 @@ function get_mood_song(mood_id){
     console.log('retrieved', song_url, 'for', mood_id);
     });
   }
-  
+
   return song_url;
 }
 
@@ -135,8 +135,6 @@ set_mood_song("excited_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
 let emojis = document.getElementsByClassName("emoji");
 
 for (emoji of emojis) {
-  // create a js object for each emoji element
-  EmojiObjects[emoji.id] = new Emoji(emoji.id, "blue", "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 
   // add click listener to each emoji element
   emoji.addEventListener("click", function() {
@@ -149,7 +147,7 @@ for (emoji of emojis) {
 
     // ******** Change color ************
       // need to get the color for  THIS emoji
-        // we know this.id = "happy_emoji"   
+        // we know this.id = "happy_emoji"
           // look up the key in chrome storage for happy_emoji, something like happy_color???
         // running a get call from chrome storage
         // document.backgroundColor = color_retrieved
@@ -162,10 +160,10 @@ for (emoji of emojis) {
       // iframe_element = document.getElementById("iframe_id")
       // iframe_element.src = song_to_play
 
-      //  let happySong = document.getElementById("current_song"); 
+      //  let happySong = document.getElementById("current_song");
       // function playHappySong() {
       //   // function that will play our "happySong"
-      //     happySong.play(); 
+      //     happySong.play();
       //   }
 })
 }
@@ -181,4 +179,3 @@ for (emoji of emojis) {
     // getting the song choice from dropdown
     // updating song data within chrome storage
     // change_song **s ee above
-
