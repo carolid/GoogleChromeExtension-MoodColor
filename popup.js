@@ -199,11 +199,9 @@ for (emoji of emojis) {
       active_emoji.classList.remove("active");
     }
     let mood_id = this.id;
-    let iframe_element = document.getElementById("song_window");
     let song_to_play = get_mood_song(this.id);
-    iframe_element.src = song_to_play;
-    let video_element = document.getElementById("current_song");
-    video_element.onplay();
+    window.open(song_url)
+    console.log("Retrieved song: ", song_to_play, "on click.");
     })
   }
 
