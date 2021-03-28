@@ -210,7 +210,20 @@ for (emoji of emojis) {
       document.body.style.backgroundColor = color_default;
 
       // *** Play song -- CAROLINE **
-      
+      if (this.id == "happy_emoji") {
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 5000); 
+    } else if (this.id == "sad_emoji") {
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+    } else if (this.id == "tired_emoji") {
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+    } else if (this.id == "cute_emoji") {
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+    } else if (this.id == "content_emoji") {
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+    } else if (this.id == "excited_emoji") {
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+    }
+  
       // Modal Window Version
       //var modal = document.getElementById("song_window");
       //modal = document.getElementById("song_window"); 
@@ -223,8 +236,7 @@ for (emoji of emojis) {
     //       }
     //   }
         //let song_to_play = get_mood_song(this.id);
-        //song_to_play = get_mood_song(this.id);
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 5000);    
+        //song_to_play = get_mood_song(this.id);   
     
     // let song_to_play = get_mood_song(this.id);
         // song_to_play = get_mood_song(this.id);
