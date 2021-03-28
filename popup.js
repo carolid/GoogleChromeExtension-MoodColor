@@ -211,17 +211,17 @@ for (emoji of emojis) {
 
       // *** Play song -- CAROLINE **
       if (this.id == "happy_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 5000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 3000); 
     } else if (this.id == "sad_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
     } else if (this.id == "tired_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
     } else if (this.id == "cute_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
     } else if (this.id == "content_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
     } else if (this.id == "excited_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 5000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
     }
   
       // Modal Window Version
