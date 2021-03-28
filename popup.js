@@ -200,7 +200,7 @@ for (emoji of emojis) {
     }
     let mood_id = this.id;
     let song_to_play = get_mood_song(this.id);
-    window.open(song_url)
+    window.open(song_url);
     console.log("Retrieved song: ", song_to_play, "on click.");
     })
   }
