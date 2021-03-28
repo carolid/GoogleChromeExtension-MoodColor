@@ -1,6 +1,6 @@
 {
-  "name": "MoodColor",
-  "description": "Connect your mood with your favorite colors and songs!",
+  "name": "MoodyOrange",
+  "description": "Music to get your feelings sorted.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
