@@ -200,8 +200,8 @@ for (emoji of emojis) {
       // *** Play song -- CAROLINE **
       // Modal Window Version
       var modal = document.getElementById("song_window");
-      modal = document.getElementById("song_window")
-      var span = getElementById("close")[0];
+      modal = document.getElementById("song_window"); 
+      var span = document.getElementById("close")[0];
       modal.style.display = "block";
       modal.style.display = "block";
       window.oncick = function(event) {
