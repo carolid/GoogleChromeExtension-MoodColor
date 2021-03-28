@@ -198,6 +198,10 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
+    if (mood_id == "happy_emoji") {
+      happy_song == get_mood_song("happy_emoji");
+      window.open(happy_song);
+    }
 
     // ** Change color **
       // need to get the color for THIS emoji
