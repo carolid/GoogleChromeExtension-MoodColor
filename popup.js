@@ -198,10 +198,11 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
-    if (mood_id == "happy_emoji") {
-      happy_song = get_mood_song("happy_emoji");
-      window.open(happy_song);
-    }
+    let mood_id = this.id;
+    let song_to_play = get_mood_song(mood.id);
+    window.open(happy_song);
+    })
+  }
 
     // ** Change color **
       // need to get the color for THIS emoji
@@ -220,8 +221,6 @@ for (emoji of emojis) {
       //   // function that will play our "happySong"
       //     happySong.play();
       //   }
-})
-}
 
 // * CUSTOMIZE BUTTON FOR COLOR / SONG DROP DOWN)
 // button = getElementByID("Customize_Button");
