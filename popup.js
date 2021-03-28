@@ -36,15 +36,19 @@ function set_mood_color(mood_id, color) {
     chrome.storage.local.set({"tired_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id == "cute_emoji") {
+  } else if (mood_id = "cute_emoji") {
     chrome.storage.local.set({"cute_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
-  } else if (mood_id == "content_emoji") {
+  }else if (mood_id = "content_emoji") {
     chrome.storage.local.set({"content_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
+<<<<<<< HEAD
   } else if (mood_id == "excited_emoji") {
+=======
+  }else if (mood_id = "excited_emoji") {
+>>>>>>> b7320fac30c6cfd03a8800bf028e1805ff34d6a4
     chrome.storage.local.set({"excited_color": color}, function() {
     console.log('Mood color ' + mood_id + ' is set to ' + color);
     });
@@ -88,6 +92,8 @@ function get_mood_color(mood_id){
   return mood_color;
 }
 
+// returns a string representing color   ex. "blue"
+// USAGE: get_mood_color("happy_emoji");
 function set_mood_song(mood_id, song_url){
   if (mood_id == "happy_emoji") {
     chrome.storage.local.set({"happy_song_url": song_url}, function() {
@@ -116,7 +122,11 @@ function set_mood_song(mood_id, song_url){
   }
 }
 
+// returns a string representing color   ex. "blue"
+// USAGE: get_mood_color("happy_emoji");
 function get_mood_song(mood_id){
+  console.log("inside get_mood_song, mood_id: ", mood_id);
+
   song_url = "";
 
   if (mood_id == "happy_emoji") {
@@ -150,7 +160,7 @@ function get_mood_song(mood_id){
     console.log('retrieved', song_url, 'for', mood_id);
     });
   }
-
+  
   return song_url;
 }
 
@@ -198,11 +208,16 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
+<<<<<<< HEAD
     let mood_id = this.id;
     let song_to_play = get_mood_song(this.id);
     window.open(result.song_to_play);
     })
   }
+=======
+    // turn clicked emoji bold
+    this.classList.add("active");
+>>>>>>> b7320fac30c6cfd03a8800bf028e1805ff34d6a4
 
     // ** Change color **
       // need to get the color for THIS emoji
