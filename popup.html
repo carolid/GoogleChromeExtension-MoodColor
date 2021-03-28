@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <h1 class="mb-3" id = "popup_header">How are you feeling today?</h1>
-      <p1 class="mb-3" id = "popup_detail"><i>Double click an emoji, and a video will appear in a new tab.</i></p1>
+
     <!-- Bootstrap CSS -->
         <link
             rel="stylesheet"
@@ -20,14 +19,21 @@
 
   </head>
   <body>
+    <div id="popup_info">
+      <h1 class="mb-3" id = "popup_header">How are you feeling today?</h1>
+      <h2 class="mb-3" id = "popup_detail"><i>Double click an emoji, and a video will appear in a new tab.</i></h2>
+    </div>
+
     <div class="emoji_list">
       <img id="sad_emoji" class="emoji" src="images/sad_emoji.png" alt="">
       <img id="tired_emoji" class="emoji" src="images/tired_emoji.png" alt="">
       <img id="happy_emoji" class="emoji" src="images/happy_emoji.png" alt="">
+    </div>
+    <div class="emoji_list">
       <img id="cute_emoji" class="emoji" src="images/cute_emoji.png" alt="">
       <img id="content_emoji" class="emoji" src="images/content_emoji.png" alt="">
       <img id="excited_emoji" class="emoji" src="images/excited_emoji.png" alt="">
-
+    </div>
 
 
       <!-- <video id = "current_song" class = "modal">

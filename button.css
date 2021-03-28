@@ -1,6 +1,6 @@
 body, html {
   height: 400px;
-  width: 700px;
+  width: 550px;
   margin:10px auto;
 }
 
@@ -17,7 +17,11 @@ body, html {
   font-size: 1em;
   color: grey;
   text-align: center;
-  padding-left:130px;
+}
+
+div.emoji_list {
+  margin:auto;
+  text-align: center;
 }
 
 img.emoji {
