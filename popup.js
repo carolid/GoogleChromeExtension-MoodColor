@@ -213,15 +213,15 @@ for (emoji of emojis) {
       if (this.id == "happy_emoji") {
         setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 1000);
     } else if (this.id == "sad_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=pMzuzIjBXnQ"), 1000);
     } else if (this.id == "tired_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=7cqHtGb9WYM"), 1000);
     } else if (this.id == "cute_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=c62M8uUqyD0"), 1000);
     } else if (this.id == "content_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=UnyLfqpyi94"), 1000);
     } else if (this.id == "excited_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
+        setTimeout(() => window.open("https://youtu.be/4NRXx6U8ABQ"), 1000);
     }
 
       // Modal Window Version
