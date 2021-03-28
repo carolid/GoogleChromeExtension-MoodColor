@@ -197,12 +197,10 @@ for (emoji of emojis) {
 
       document.body.style.backgroundColor = color_default;
 
-      // *** Play song **
-
-      // let song_to_play = get_mood_song(this.id);
-      // song_to_play = get_mood_song(this.id);
-
-      // window.open(song_to_play);
+      // *** Play song -- CAROLINE **
+      let song_to_play = get_mood_song(this.id);
+      song_to_play = get_mood_song(this.id);
+      window.open(song_to_play);
       // console.log("Retrieved song: ", song_to_play, "on click.");
 
       // key = this.id;                        returns something like "happy_emoji"
