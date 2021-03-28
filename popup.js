@@ -160,7 +160,7 @@ function get_mood_song(mood_id){
     console.log('retrieved', song_url, 'for', mood_id);
     });
   }
-  
+
   return song_url;
 }
 
@@ -223,7 +223,9 @@ for (emoji of emojis) {
       // need to get the color for THIS emoji
         // get color string using get_mood_color()
         // document.backgroundColor = color_retrieved
-
+        
+    let color_default = get_mood_color(this.id);
+    document.body.style.backgroundColor = color_default;
 
     // *** Play song **
       // key = this.id;                        returns something like "happy_emoji"
