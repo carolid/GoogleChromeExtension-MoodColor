@@ -122,13 +122,6 @@ set_mood_song("excited_emoji", "https://www.youtube.com/watch?v=zwJQE0HkYZw");
 
 // get_mood_song("happy_emoji");
 
-class Emoji {
-  constructor(emoji_id, color, song) {
-    this.emoji_element = document.getElementById(emoji_id);
-    this.color = color;
-    this.song = song;
-  }
-}
 //   Happy_Emoji_object
       // html element
       // color
@@ -137,10 +130,6 @@ class Emoji {
 // chrome.storage
     // happy_color :  "red"
     // happy_song : "youtube.osdjiosd"
-
-
-// object containing emoji objects
-let EmojiObjects = {};
 
 // array of emoji HTML elements
 let emojis = document.getElementsByClassName("emoji");
@@ -157,8 +146,6 @@ for (emoji of emojis) {
     if (active_emoji != null) {
       active_emoji.classList.remove("active");
     }
-    // turn clicked emoji bold
-    this.classList.add("active");
 
     // ******** Change color ************
       // need to get the color for  THIS emoji
@@ -195,5 +182,3 @@ for (emoji of emojis) {
     // updating song data within chrome storage
     // change_song **s ee above
 
-
-console.log(EmojiObjects);
