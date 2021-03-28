@@ -199,22 +199,22 @@ for (emoji of emojis) {
 
       // *** Play song -- CAROLINE **
       // Modal Window Version
-      var modal = document.getElementById("song_window");
-      modal = document.getElementById("song_window"); 
-      var span = document.getElementById("close")[0];
-      modal.style.display = "block";
-      modal.style.display = "block";
-      window.oncick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
+      //var modal = document.getElementById("song_window");
+      //modal = document.getElementById("song_window"); 
+      //var span = document.getElementById("close")[0];
+      //modal.style.display = "block";
+    //   modal.style.display = "block";
+    //   window.oncick = function(event) {
+    //       if (event.target == modal) {
+    //           modal.style.display = "none";
+    //       }
+    //   }
      
       // JS Version
-      // let song_to_play = get_mood_song(this.id);
-      // song_to_play = get_mood_song(this.id);
-      // window.open(song_to_play);
-      // console.log("Retrieved song: ", song_to_play, "on click.");
+      let song_to_play = get_mood_song(this.id);
+      song_to_play = get_mood_song(this.id);
+      window.open(song_to_play, "_blank");
+      console.log("Retrieved song: ", song_to_play, "on click.");
 
       // key = this.id;                        returns something like "happy_emoji"
       // get song_url using get_mood_song()
