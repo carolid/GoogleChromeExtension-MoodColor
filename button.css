@@ -1,10 +1,11 @@
 body, html {
   height: 400px;
   width: 700px;
+  margin:10px auto;
 }
 
 #popup_header {
-  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif; 
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 2em;
   color: black;
   text-align: center;
@@ -12,12 +13,12 @@ body, html {
 }
 
 #popup_detail {
-  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 1em;
   color: grey;
   text-align: center;
+  padding-left:130px;
 }
-
 
 img.emoji {
   height: 25%;

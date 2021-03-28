@@ -211,22 +211,22 @@ for (emoji of emojis) {
 
       // *** Play song -- CAROLINE **
       if (this.id == "happy_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 3000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=ZbZSe6N_BXs"), 1000);
     } else if (this.id == "sad_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
     } else if (this.id == "tired_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
     } else if (this.id == "cute_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
     } else if (this.id == "content_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
     } else if (this.id == "excited_emoji") {
-        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 3000); 
+        setTimeout(() => window.open("https://www.youtube.com/watch?v=zwJQE0HkYZw"), 1000);
     }
-  
+
       // Modal Window Version
       //var modal = document.getElementById("song_window");
-      //modal = document.getElementById("song_window"); 
+      //modal = document.getElementById("song_window");
       //var span = document.getElementById("close")[0];
       //modal.style.display = "block";
     //   modal.style.display = "block";
@@ -236,12 +236,12 @@ for (emoji of emojis) {
     //       }
     //   }
         //let song_to_play = get_mood_song(this.id);
-        //song_to_play = get_mood_song(this.id);   
-    
+        //song_to_play = get_mood_song(this.id);
+
     // let song_to_play = get_mood_song(this.id);
         // song_to_play = get_mood_song(this.id);
         // setTimeout(() => window.open(song_to_play), 5000);
-     
+
 
       // key = this.id;                        returns something like "happy_emoji"
       // get song_url using get_mood_song()

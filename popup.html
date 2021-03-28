@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <h1 id = "popup_header">How are you feeling today?</h1>
-      <p1 id = "popup_detail"><i>Double click an emoji, and a video will appear in a new tab.</i></p1>
+    <h1 class="mb-3" id = "popup_header">How are you feeling today?</h1>
+      <p1 class="mb-3" id = "popup_detail"><i>Double click an emoji, and a video will appear in a new tab.</i></p1>
     <!-- Bootstrap CSS -->
         <link
             rel="stylesheet"
@@ -13,6 +13,11 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="button.css">
+
+    <!-- Font Import -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div class="emoji_list">
@@ -25,7 +30,7 @@
 
 
 
-      <video id = "current_song" class = "modal">
+      <!-- <video id = "current_song" class = "modal">
         <iframe id = "song_window" class = "modal_content" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <span class = "close">&times;
           </span>
@@ -43,7 +48,7 @@
         <option value="black">black
     </select>
 
-    <button type="submit" class="btn">CUSTOMIZE</button>
+    <button type="submit" class="btn">CUSTOMIZE</button> -->
 
     <script src="popup.js"></script>
   </body>
