@@ -3,6 +3,28 @@ body, html {
   width: 700px;
 }
 
+#popup_header {
+  font-family: fantasy;
+  font-size: 1em;
+  color: black;
+  justify-content: center;
+
+}
+
+#popup_detail {
+  font-family: fantasy;
+  font-size: 0.5em;
+  color: grey;
+  justify-content: center;
+}
+
+.emoji_list {
+  display: grid;
+  grid-gap: 50px;
+  justify-content: space-evenly;
+
+}
+
 img.emoji {
   height: 25%;
   width: 25%;
