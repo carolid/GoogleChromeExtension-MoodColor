@@ -165,14 +165,15 @@ for (emoji of emojis) {
 })
 }
 
+// * CUSTOMIZE BUTTON FOR COLOR / SONG DROP DOWN)
 // button = getElementByID("Customize_Button");
 // add event listener on "click"
 // function ()
-  // update_color
+  // update_color    using set_mood_color()
     // getting the color choice from dropdown
     // updating color data within chrome storage
-    // change_color ** see above
-  // update_song
+    // change_color  see above
+  // update_song    using set_mood_song()
     // getting the song choice from dropdown
     // updating song data within chrome storage
-    // change_song **s ee above
+    // change_song see above
